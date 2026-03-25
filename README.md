@@ -1,9 +1,10 @@
 # AWS-Production-Infrastructure-with-terraform
+
 A production-ready AWS infrastructure that is highly available, secure, automated, scalable, and cost-optimized.
 
 
 
-Cost Optimization Strategies
+#Cost Optimization Strategies
 
 Graviton2 (ARM64): 20% cheaper than x86 with better performance
 Savings Plans: 1-year Compute Savings Plan saves ~20-30%
@@ -15,7 +16,7 @@ Right-sizing: Start with t4g.micro, scale up based on metrics
 
 
 
-Monthly Cost Breakdown (us-east-1)
+#Monthly Cost Breakdown (us-east-1)
 
 
 Service	Configuration	                  Monthly Cost
@@ -71,20 +72,20 @@ Production Readiness Checklist
 - [x] gp3 volumes (cheaper than gp2)
 
 
-DEPLOYMENT STEPS
+#DEPLOYMENT STEPS
 
-# Install tools
+Install tools
 brew install terraform awscli
 
-# Configure AWS SSO
+Configure AWS SSO
 aws configure sso
 
-# Create state bucket (one-time)
+Create state bucket (one-time)
 aws s3 mb s3://terraform-state-saas-prod
 
 
 
-INITIALIZE AND DEPLOY
+#INITIALIZE AND DEPLOY
 
 git clone <repo>
 cd terraform-aws-saas/environments/production
@@ -95,7 +96,7 @@ terraform apply
 
 
 
-POST DEPLOYMENT
+#POST DEPLOYMENT
 
 Update DNS to point to ALB DNS name
 Verify SSL certificate validation
