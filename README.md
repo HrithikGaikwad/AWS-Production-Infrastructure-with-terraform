@@ -1,6 +1,37 @@
 # AWS-Production-Infrastructure-with-terraform
 A production-ready AWS infrastructure that is highly available, secure, automated, scalable, and cost-optimized.
 
+
+
+Cost Optimization Strategies
+
+Graviton2 (ARM64): 20% cheaper than x86 with better performance
+Savings Plans: 1-year Compute Savings Plan saves ~20-30%
+Scheduled Scaling: Scale to 1 instance nights/weekends (40% savings)
+Spot Instances: For dev/test environments (up to 90% savings)
+Reserved Instances: For predictable production workloads
+Right-sizing: Start with t4g.micro, scale up based on metrics
+
+
+
+
+Monthly Cost Breakdown (us-east-1)
+
+
+Service	Configuration	                  Monthly Cost
+EC2 (t4g.micro)	2 instances, Graviton2	   ~$12.50
+ALB	Application Load Balancer	           ~$16.43
+Data Transfer	100 GB/month	           ~$9.00
+CloudWatch	Logs, metrics, alarms	       ~$5.00
+NAT Gateway	1 NAT, 100 GB processed	       ~$37.45
+S3	ALB logs, 10 GB	                       ~$0.23
+KMS	1 key	                               ~$1.00
+VPC Flow Logs	10 GB ingested	           ~$5.00
+Total		                               ~$86.61/month
+
+
+
+
 ## Architecture Diagram
 
 ```mermaid
