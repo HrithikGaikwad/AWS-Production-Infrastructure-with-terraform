@@ -15,7 +15,6 @@ Right-sizing: Start with t4g.micro, scale up based on metrics
 
 
 
-
 # Monthly Cost Breakdown (us-east-1)
 
 
