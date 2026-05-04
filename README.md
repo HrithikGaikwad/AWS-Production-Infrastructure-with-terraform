@@ -3,7 +3,6 @@
 A production-ready AWS infrastructure that is highly available, secure, automated, scalable, and cost-optimized
 
 
-
 # Cost Optimization Strategies
 
 Graviton2 (ARM64): 20% cheaper than x86 with better performance
